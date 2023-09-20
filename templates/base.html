@@ -12,8 +12,8 @@
   {% include 'navbar.html' %}
       <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4">Welcome at Cablestore</h1>
-        <p class="lead">Your store for cheap and quality cables.</p>
+        <h1 class="display-4 banner-text">Welcome at Cablestore</h1>
+        <p class="lead banner-text">Your store for cheap and quality cables.</p>
       </div>
     </div>
     {% block content %}
@@ -22,3 +22,18 @@
 	<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
   </body>
 </html>
+
+<style>
+    .jumbotron {
+      background-image: url("/media/img/banner.png");
+      background-size: cover;
+    }
+    .banner-text {
+        color: white;
+        text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000
+    }
+</style>
